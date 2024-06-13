@@ -1,37 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/output.css" />
 
-  Score
-  Rules
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  You Picked
-  The House Picked
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-  You Win
-  You Lose
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="">
+    <div class="w-full p-6">
+      <header>
+        <div
+          id="banner"
+          class="flex w-full border-primary border-2 border-solid rounded-lg p-2 justify-between items-center mx-auto"
+        >
+          <div id="rps" class="text-white font-bold leading-none">
+            <p>rock</p>
+            <p>paper</p>
+            <p>scissors</p>
+          </div>
+          <div
+            id="score_section"
+            class="bg-white px-5 py-5 rounded-lg font-bold"
+          >
+            <p id="score_title" class="text-tertiary text-sm tracking-[.125em]">
+              score
+            </p>
+            <p id="score" class="text-center text-secondary text-3xl">0</p>
+          </div>
+        </div>
+      </header>
 
-  Play Again
+      <div class="choice-triangle">
+        <div class="w-full ml-8">
+          <img src="images/bg-triangle.svg" class="tri" />
+        </div>
+        <div class="paper_border -top-14 options paper w-[120px] h-[120px] flex items-center justify-center rounded-full absolute">
+          <div class="bg-white rounded-full w-[90px] h-[90px] flex items-center justify-center border-2 border-solid border-white">
+            <img src="images/icon-paper.svg" />
+          </div>
+        </div>
+        <div class="rock_border -bottom-8 right-16 options rock w-[120px] h-[120px] flex items-center justify-center rounded-full absolute">
+          <div class="bg-white rounded-full w-[90px] h-[90px] flex items-center justify-center border-2 border-solid border-white">
+            <img src="images/icon-rock.svg" />
+          </div>
+        </div>
+        <div
+          class="scissors_border -top-14 -right-12 options scissors w-[120px] h-[120px] flex items-center justify-center rounded-full absolute"
+        >
+          <div class="bg-white rounded-full w-[90px] h-[90px] flex items-center justify-center border-2 border-solid border-white">
+            <img src="images/icon-scissors.svg" />
+          </div>
+        </div>
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <!-- RULES BUTTON -->
 
+      <div class="rulesBtn_container">
+        <button class="rulesBtn">RULES</button>
+      </div>
+    </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- GAME -->
+
+    <div class="game">
+      <div class="picks">
+        <div class="picker">
+          <div id="picker_choice">
+            <div class="rock_border choice-cont1">
+              <div class="">
+                <img src="images/icon-rock.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="picker1_text">YOU PICKED</div>
+        </div>
+
+        <div class="picker">
+          <div class="picker_container">
+            <div class="choice-cont1 p2_border"></div>
+            <div id="hchoice">
+              <div class="paper_border choice-cont1 picker2">
+                <div class="bg-white rounded-full w-[90px] h-[90px] flex items-center justify-center border-2 border-solid border-white">
+                  <img src="images/icon-paper.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="picker1_text">THE HOUSE PICKED</div>
+        </div>
+      </div>
+      <!-- MESSAGE -->
+      <div class="message_cont">
+        <div class="message" id="msg">YOU LOSE</div>
+        <div class="playBtn_cont">
+          <a href="index.html"><button class="playBtn">PLAY AGAIN</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RULES -->
+
+    <div class="rules_overlay">
+      <div class="rules_container">
+        <h3 class="rules_text">RULES</h3>
+        <img src="images/image-rules.svg" class="rules_img" />
+      </div>
+    </div>
+
+    <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/settings/profile">Dabirax</a>.
+    </div>
+    </footer> -->
+  </body>
+  <script src="js/script.js"></script>
 </html>

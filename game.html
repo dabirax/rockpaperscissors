@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/output.css">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div id="banner">
+        <div id="rps">
+          <p>rock</p>
+          <p>paper</p>
+          <p>scissors</p>
+        </div>
+        <div id="score_section">
+          <p id="score_title">score</p>
+          <p id="score">12</p>
+        </div>
+      </div>
+    </header>
+   
+    
+  <!-- GAME -->
+    
+    <div class="game">
+      <div class="picks">
+      <div class="picker">
+        <div id="picker_choice">
+        <div class="rock_border choice-cont1">
+          <div class="choice-wrapper">
+              <img src="images/icon-rock.svg"/>
+          </div>
+         </div>
+        </div>
+          <div class="picker1_text">
+             YOU PICKED
+          </div>
+      </div>
+
+      <div class="picker">
+        <div class="picker_container">
+          <div class="choice-cont1 p2_border">
+            
+          </div>
+          <div id="hchoice">
+          <div class="paper_border choice-cont1 picker2">
+            <div class="choice-wrapper">
+                <img src="images/icon-paper.svg"/>
+            </div>
+          </div>
+        </div>
+        </div>
+         <div class="picker1_text">
+            THE HOUSE PICKED
+         </div>
+      </div>
+    </div>
+      <!-- MESSAGE -->
+      <div class="message_cont">
+        <div class="message" id="msg">
+            YOU LOSE
+        </div>
+        <div class="playBtn_cont">
+          <a href="index.html"><button class="playBtn">
+            PLAY AGAIN
+          </button></a>
+        </div>
+      </div>
+      
+    </div>  
+    
+    <!-- RULES BUTTON -->
+
+    <div class="rulesBtn_container">
+        <button class="rulesBtn">
+          RULES
+        </button>
+    </div>
+  </div>
+
+      <!-- RULES -->
+
+      <div class="rules_overlay">
+        <div class="rules_container">
+        <h3 class="rules_text">RULES</h3>
+          <img src="images/image-rules.svg" class="rules_img"/>
+        </div>
+    </div>
+  
+  
+    <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/settings/profile">Dabirax</a>.
+    </div>
+    </footer> -->
+ 
+</body>
+<script src="js/script.js"> </script>
+</html>
